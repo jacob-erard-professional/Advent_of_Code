@@ -27,24 +27,13 @@ def surround_with_x(text, border_char='x'):
     return '\n'.join(bordered_lines)
 
 def parse_to_2d_array(text):
-    """
-    Parse text into a 2D array where each character is an element.
-    
-    Args:
-        text: The input text string
-    
-    Returns:
-        A 2D list where grid[row][col] is a character
-    """
     lines = text.split('\n')
     
-    # Remove empty lines at start and end
     while lines and not lines[0].strip():
         lines.pop(0)
     while lines and not lines[-1].strip():
         lines.pop()
     
-    # Convert each line to a list of characters
     grid = [list(line) for line in lines]
     
     return grid
