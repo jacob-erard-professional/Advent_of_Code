@@ -19,7 +19,7 @@ for i in reversed(range(0, len(arr[0]))):
     if num != "":
         temp = np.append(temp, num)
         num = ""
-    elif num == "" or i==0:
+    else:
         if ops[op_num] == '+':
             count += (temp.astype(int).sum())
         else:
